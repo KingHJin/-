@@ -1,0 +1,61 @@
+
+<!doctype html> <!예의상 html로 작성되었다고 알려주는 것>
+
+
+<html><!문서 구조화 최상위 테그, head와 body를 묶는 테그>
+<! html의 모든 코드는 head 아니면 body테그에 묶인다>
+
+
+<head> <! body를 설명 하는 것을 head로 묶기로 약속, 즉 제목>
+  <meta charset="utf-8"> <!한글 표시 가능!!>
+  <title>WEB1 - html</title> <! 파일 명이 제목이 아니라 내가 지정한 것이 제목>
+  <! 컴퓨터야 여기에 css style테그가 없지만 link를 줄테니 있는 것처럼 해석해>
+  <link rel="stylesheet" href="style.css">
+  <meta name="naver-site-verification" content="5770404a5e0bfd1c39a5233860e8fd50ec0fb43f" />
+  <!jQuery 라이브러리 활용하기위해 이거 한줄이면 끝>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+
+<body><!본문을 알리는 테그>
+  <h1><a href="index.html">김형진의 웹</a></h1>
+
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+
+  <div id="grid">
+
+    <ol> <!자동 숫자 메김 ordered list의 약자>
+      <li><a href="1.html" class="saw">HTML</a></li>
+      <li><a href="2.html" class="saw" id="active">CSS</a></li> <! class테그 안에는 여러개의 속성이 들어갈 수 있고 띄어쓰기로 구분한다.>
+      <! 우선순위를 부여하기 위해 id로 묶음>
+      <li><a href="3.html">JAVASCRIPT</a></li>
+    </ol>
+
+    <div id="article">
+      <h2>html</h2> <!제목>
+
+      <br>
+      <!링크 걸기>
+      <a
+      href="http://www.w3.org/TR/2011/WD-html5-20110405/"
+      target="blank" title="HTML5 사이트 주소"> <!하이퍼링크에 마우스 올렸을때 설명 해줌>
+      HyperText Markup Language (HTML)
+    </a>
+      is a type of markup language.
+      <p
+      style="margin-top:10px"></p>[1] It is used to make webpages. Webpages can include writing, links, pictures, and even sound and video. HTML tells web browsers what webpages should look like. HTML also adds meta information to webpages. Meta information is information about about a webpage e.g., the name of the person who created the page. Web browsers usually do not show meta information.
+      HTML is often used with Cascading Style Sheets (CSS) and JavaScript. CSS is used to change the way HTML looks. JavaScript tells websites how to behave. It can also change HTML and CSS.
+      HTML is made by the World Wide Web Consortium (W3C). There are many versions of HTML. As of September 2018, the current standard of HTML is called HTML 5 and is specifically at version 5.2.
+      <!css문법인데 맛보기만, 픽셀단위로 정교하게 단락 나누기 가능>
+    </div>
+  </div>
+  <! id와#을 쓰지 않아도 this라는 것을 통해 지정할 수 있다>
+    <!코드의 중복을 제거하는 것 리팩토링! / 코드 한줄만 바꾸면 모든 target 값을 바꿀수 있다!>
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+
+</body>
+</html>

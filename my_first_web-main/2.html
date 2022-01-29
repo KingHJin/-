@@ -1,0 +1,60 @@
+
+<!doctype html> <!예의상 html로 작성되었다고 알려주는 것>
+
+
+<html><!문서 구조화 최상위 테그, head와 body를 묶는 테그>
+<! html의 모든 코드는 head 아니면 body테그에 묶인다>
+
+
+<head> <! body를 설명 하는 것을 head로 묶기로 약속, 즉 제목>
+  <meta charset="utf-8"> <!한글 표시 가능!!>
+  <title>WEB2 - CSS</title> <! 파일 명이 제목이 아니라 내가 지정한 것이 제목>
+  <! 컴퓨터야 여기에 css style테그가 없지만 link를 줄테니 있는 것처럼 해석해>
+  <link rel="stylesheet" href="style.css">
+  <meta name="naver-site-verification" content="5770404a5e0bfd1c39a5233860e8fd50ec0fb43f" />
+  <!jQuery 라이브러리 활용하기위해 이거 한줄이면 끝>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+
+<body><!본문을 알리는 테그>
+  <h1><a href="index.html">김형진의 웹</a></h1>
+
+  <input type="button" value="night" onclick="
+  nightDayHandler(this);
+  ">
+
+  <div id="grid">
+
+    <ol> <!자동 숫자 메김 ordered list의 약자>
+      <li><a href="1.html" class="saw">HTML</a></li>
+      <li><a href="2.html" class="saw" id="active">CSS</a></li> <! class테그 안에는 여러개의 속성이 들어갈 수 있고 띄어쓰기로 구분한다.>
+      <! 우선순위를 부여하기 위해 id로 묶음>
+      <li><a href="3.html">JAVASCRIPT</a></li>
+    </ol>
+
+    <div id="article">
+      <h2>CSS</h2> <!제목>
+
+      <br>
+      <!링크 걸기>
+      <a
+      href="https://ko.wikipedia.org/wiki/CSS"
+      target="blank" title="CSS위키피디아"> <!하이퍼링크에 마우스 올렸을때 설명 해줌>
+      Cascading Style Sheets (CSS)
+    </a>
+      is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+      <p
+      style="margin-top:10px"></p>
+       [1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]
+      CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.
+    </div>
+  </div>
+  <! id와#을 쓰지 않아도 this라는 것을 통해 지정할 수 있다>
+    <!코드의 중복을 제거하는 것 리팩토링! / 코드 한줄만 바꾸면 모든 target 값을 바꿀수 있다!>
+    <input type="button" value="night" onclick="
+    nightDayHandler(this);
+    ">
+
+</body>
+</html>

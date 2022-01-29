@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+
+  <body>
+    <h1>Object</h1>
+    <h2>Create</h2>
+
+    <script>
+      var coworkers = {
+        "programmer":"egoing",
+        "designer":"leezche"
+      };
+      document.write("programmer : "+coworkers.programmer+"<br>");
+      document.write("designer : "+coworkers.designer+"<br>");
+      coworkers.bookkeeper = "duru";
+      document.write("bookkeeper : "+coworkers.bookkeeper+"<br>");
+      coworkers["data scientist"] = "taeho"; // 띄어쓰기 포함된 이름 넣기
+      document.write("data scientist : "+coworkers["data scientist"]+"<br>");
+    </script>
+
+    <h2>Iterate</h2>
+    <script>
+      for(var key in coworkers){
+        document.write(key+' : '+coworkers[key]+'<br>');
+      }
+    </script>
+
+    <h2>Property(객체에 소속된 변수) & Method(객체에 소속된 함수)</h2>
+    
+    <script>
+      coworkers.showAll = function(){
+        for(var key in this){
+          document.write(key+' : '+this[key]+'<br>');
+        }
+      }
+      coworkers.showAll(); // showAll도 coworkers에 종속된 데이터라 showAll도 표시가 됨.
+
+    </script>
+  </body>
+</html>

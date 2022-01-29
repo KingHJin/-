@@ -1,0 +1,45 @@
+
+<!doctype html> <!예의상 html로 작성되었다고 알려주는 것>
+
+
+<html><!문서 구조화 최상위 테그, head와 body를 묶는 테그>
+<! html의 모든 코드는 head 아니면 body테그에 묶인다>
+
+
+<head> <! body를 설명 하는 것을 head로 묶기로 약속, 즉 제목>
+  <meta charset="utf-8"> <!한글 표시 가능!!>
+  <title>김형진의 웹</title> <! 파일 명이 제목이 아니라 내가 지정한 것이 제목>
+  <! 컴퓨터야 여기에 css style테그가 없지만 link를 줄테니 있는 것처럼 해석해>
+  <link rel="stylesheet" href="style.css">
+  <meta name="naver-site-verification" content="5770404a5e0bfd1c39a5233860e8fd50ec0fb43f" />
+  <!jQuery 라이브러리 활용하기위해 이거 한줄이면 끝>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"></script>
+</head>
+
+<body><!본문을 알리는 테그>
+  <h1><a href="index.html">김형진의 웹</a></h1>
+
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
+
+  <div id="grid">
+
+    <ol> <!자동 숫자 메김 ordered list의 약자>
+      <li><a href="1.html" class="saw">HTML</a></li>
+      <li><a href="2.html" class="saw" id="active">CSS</a></li> <! class테그 안에는 여러개의 속성이 들어갈 수 있고 띄어쓰기로 구분한다.>
+      <! 우선순위를 부여하기 위해 id로 묶음>
+      <li><a href="3.html">JAVASCRIPT</a></li>
+    </ol>
+
+    <div id="article">
+      <h2>WEB</h2> <!제목>
+
+      <br>
+    <img src="images/color.jpg" width="50%"> <!이미지 넣기 / width와 src위치 바뀌어도 >
+    </div>
+  </div>
+
+</body>
+</html>

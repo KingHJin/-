@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<! 미디어 쿼리 : 화면 크기 따라서 화면 보이는 것 다르게 / 반응형 웹>
+
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div{
+        border:10px solid green;
+        font-size:60px;
+      }
+      /*화면이 800px보다 작으면 div 애들 표시 안함*/
+      @media(max-width:800px){
+        div{
+          display:none;
+        }
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <div>
+      Responsive
+    </div>
+  </body>
+
+
+</html>

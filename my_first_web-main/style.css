@@ -1,0 +1,59 @@
+
+/*하이퍼 링크 글자 검은색 + 모든 밑줄 제거
+ 여기서 a는 선택자라고 부른다
+ 이 페이지의 모든 a 테그를 선택
+ style은 여기서 부터 css문법이다! 라고 선언하는 것*/
+
+ /* 돌려쓰기 위해서 css파일을 따로 뺌*/
+a { /* "JAVASCRIPT"*/
+  color : black;
+  text-decoration : none;
+}
+.saw{ /* "HTML"*/
+  color:black;
+}/*그냥 saw로 하면 이 웹 페이지에 있는 모든 saw라는 이름의 테그를 선택하는 것
+그런데 .saw로 하면 class값이 saw인 테그 선택*/
+#active{/* "CSS"*/
+  color:black;
+}/* #active를 한 이유가 뭐냐. 명령 순서에 따라서 그레이 입혔다가 레드 입혔는데 이걸 순서를 바꿔도 레드를 입히기 위해.
+즉 우선순위를 부여하기 위해 사용
+정리 : 그냥 a, h1 이렇게 하면 테그 선택자, .을 붙이면 클레스 선택자, #을 붙이면 id 선택자 / 우선 순위 : id, class, 일반
+id는 전체중 딱 1개만 나와야 됨 그냥 규칙. / 포괄적일수록 우선순위 밀림
+아하! .과 class / #과 id는 짝이구나 */
+
+h1{
+  font-size: 50px;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  margin: 0;
+  padding: 20px;
+}
+ol{
+  border-right: 1px solid gray;
+  width: 150px;
+  margin:0;
+  padding-left: 65px;
+  padding-top: 50px;
+}
+/*아니 여기까지 보니까 이 선들이 화면에 꽉차지 않네? 개발자 도구를 통해 보니까 body테그에 마진값이 있더라.*/
+body{
+  margin:0;
+}
+#grid{
+  display:grid;
+  grid-template-columns: 200px 1fr;
+}
+#article{
+  padding-left: 50px;
+}
+@media(max-width:800px){
+  #grid{
+    display:block;
+    }
+  ol{
+    border-right: none;
+  }
+  h1{
+    border-bottom: none;
+  }
+}
